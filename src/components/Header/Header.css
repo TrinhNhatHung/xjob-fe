@@ -1,0 +1,126 @@
+#header {
+    width: 95%;
+    margin: auto;
+    font-size: 90%;
+    height: 60px;
+    border-bottom: 1px solid #d5e0d5;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .headerLeft {
+    height: 100%;
+}
+
+#header .headerLeft .headerLogo .nav-link {
+    color: #14A800 !important;
+    font-size: 170%;
+}
+
+#header .headerLeft .nav-item .nav-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+#header .headerLeft .nav-item .nav-link:hover {
+    color: #14a800
+}
+
+#header .headerRight {
+    align-items: center;
+}
+
+#header .headerRight .loginBtn {
+    color: #001e00;
+    margin-right: 5px;
+}
+
+#header .headerRight .loginBtn:hover {
+    color: #14a800
+}
+
+#header .headerRight .signUpBtn {
+    color: #FFF;
+    background-color: #001e00;
+    border-radius: 30px;
+    height: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 100%;
+}
+
+#header .headerRight .signUpBtn:hover {
+    background-color: #334b33;
+}
+
+#header .headerRight .headerIcon {
+    height: 30px;
+    width: 30px;
+    color: #001e00;
+}
+
+#header .headerRight .btnIcon {
+    margin-left: 25px;
+}
+
+#header .headerRight .dropdown .dropdown-menu {
+    font-family: sans-serif;
+    font-size: 0.95em;
+    width: 220px;
+}
+
+#header .headerRight .dropdown .dropdown-menu.notification {
+    width: 355px;
+    padding: 0px;
+}
+
+#header .headerRight .dropdown .dropdown-menu.notification .seeAllNotification {
+    font-family: sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 1em;
+    color: rgb(44, 44, 44);
+}
+
+#header .headerRight .dropdown .dropdown-menu.notification .seeAllNotification:hover {
+    background-color: #F2F7F2;
+}
+
+#header .headerRight .dropdown .dropdown-menu .avatar {
+    margin: auto;
+    height: 70px;
+    width: 70px;
+    margin-top: 20px;
+}
+
+#header .headerRight .dropdown .dropdown-menu .userName {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 15px;
+    color: rgb(44, 44, 44);
+}
+
+#header .headerRight .dropdown .dropdown-menu .role {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: rgb(44, 44, 44);
+}
+
+#header .headerRight .dropdown .dropdown-menu .dropdown-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#header .headerRight .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #F2F7F2;
+}
