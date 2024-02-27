@@ -1,0 +1,17 @@
+.offline {
+    margin: 10% auto;
+}
+
+.btnOfflineTry {
+    background-color: #14a800;
+    color: #fff;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px 15px;
+}
+
+.offlineIcon {
+    height: 50px;
+    width: 50px;
+}

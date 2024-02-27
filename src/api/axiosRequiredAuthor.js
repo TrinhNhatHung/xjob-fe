@@ -2,16 +2,16 @@ import axios from "axios";
 import queryString from 'query-string';
 
 const axiosRequiredAuthor = axios.create({
-    baseURL : "http://xjobapi-env.eba-yubniifx.us-east-2.elasticbeanstalk.com",
-    headers : {
-    'content-type': 'application/json'
+    baseURL: "http://localhost:8080/xjob/",
+    headers: {
+        'content-type': 'application/json'
     },
-    paramsSerializer : params => queryString.stringify(params)
+    paramsSerializer: params => queryString.stringify(params)
 });
 
-axiosRequiredAuthor.interceptors.request.use(async (config)=> {
+axiosRequiredAuthor.interceptors.request.use(async(config) => {
     let token = localStorage.getItem("token");
-    if (token){
+    if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
 
@@ -20,13 +20,13 @@ axiosRequiredAuthor.interceptors.request.use(async (config)=> {
 
 axiosRequiredAuthor.interceptors.response.use((response) => {
     if (response && response.data) {
-      return response.data;
+        return response.data;
     }
-  
+
     return response;
-  }, (error) => {
+}, (error) => {
     // Handle errors
     throw error;
-  });
+});
 
 export default axiosRequiredAuthor;

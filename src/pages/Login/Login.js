@@ -23,12 +23,16 @@ function Login() {
     password: "",
   });
   const dispatch = useDispatch();
-  const requestCheckLogin = async (uid) => {
-    let config = {
-      method: "GET",
-      url: `/user/check-login?uid=${uid}`,
-    };
-    axiosClient(config)
+  const requestCheckLogin = async (uid, email, password) => {
+    // let config = {
+    //   method: "POST",
+    //   url: `/user/check-login`,
+    // };
+    let postData = {
+        email,
+        password
+    }
+    axiosClient.post(`/user/check-login`, null, {params : postData})
       .then((response) => {
         localStorage.setItem("token",response.data.token);
         dispatch(login({
@@ -92,7 +96,7 @@ function Login() {
       signInWithEmailAndPassword(auth, user.email, user.password)
         .then((userCredential) => {
           let uid = userCredential.user.uid;
-          requestCheckLogin(uid);
+          requestCheckLogin(uid, user.email, user.password);
         })
         .catch((error) => {
           inputEmailDiv.current.classList.add("borderError");

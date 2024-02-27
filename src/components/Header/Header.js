@@ -108,6 +108,11 @@ function Header() {
     })
   }
 
+  const clickNavLinkTag = (event, url)=> {
+    event.preventDefault();
+    navigate(url);
+  }
+
   const renderHeaderRight = () => {
     if (user.isAuthen) {
       return (
@@ -199,12 +204,12 @@ function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/find-talent">
+              <a className="nav-link" href="/find-talent" onClick={(event) => clickNavLinkTag(event,"/find-talent")}>
                 Tìm ứng viên
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/find-work">
+              <a className="nav-link" href="/find-work" onClick={(event) => clickNavLinkTag(event,"/find-work")}>
                 Tìm việc
               </a>
             </li>
